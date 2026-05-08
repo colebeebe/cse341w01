@@ -1,16 +1,8 @@
-const express = require('express');
-const Contact = require('../db/contact');
-const connectMongo = require('../db/connection');
-const router = express.Router();
+const { getAll, getById } = require('../controllers/contacts');
+const router = require('express').Router();
 
-router.get('/', async (req, res) => {
-    const contacts = await Contact.find();
-    res.json(contacts);
-});
+router.get('/', getAll);
 
-router.get('/:id', async (req, res) => {
-    const contact = await Contact.findById(req.params.id);
-    res.json(contact);
-});
+router.get('/:id', getById);
 
 module.exports = router;
