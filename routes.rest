@@ -4,9 +4,50 @@ GET http://localhost:3000/contacts
 ###
 GET http://localhost:3000/contacts/69f5180fff633c6919d73199
 ###
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Johnny",
+    "lastName": "Depp",
+    "email": "johnny.depp@gmail.com",
+    "favoriteColor": "black",
+    "birthday": "1963-06-09"
+}
+###
+PUT http://localhost:3000/contacts/69f5180fff633c6919d73199
+Content-Type: application/json
+
+{
+    "favoriteColor": "pink"
+}
+###
+DELETE http://localhost:3000/contacts/69fe4f1dcc9a02057f716d56
+###
+
 // PRODUCTION
 ###
 GET https://cse341w01-3k2g.onrender.com/contacts
 ###
 GET https://cse341w01-3k2g.onrender.com/contacts/69f5180fff633c6919d73199
+###
+POST http://cse341w01-3k2g.onrender.com/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Johnny",
+    "lastName": "Depp",
+    "email": "johnny.depp@gmail.com",
+    "favoriteColor": "black",
+    "birthday": "1963-06-09"
+}
+###
+PUT http://cse341w01-3k2g.onrender.com/contacts/69f5180fff633c6919d73199
+Content-Type: application/json
+
+{
+    "favoriteColor": "pink"
+}
+###
+DELETE http://cse341w01-3k2g.onrender.com/contacts/69fe4f1dcc9a02057f716d56
 ###
