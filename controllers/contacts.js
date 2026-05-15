@@ -1,6 +1,6 @@
-const Contact = require('../db/contact');
+const Contact = require('../models/contact');
 
-const getAll = async (req, res) => {
+const getAllContacts = async (req, res) => {
     try {
         const contacts = await Contact.find();
         res.status(200).json(contacts);
@@ -12,7 +12,7 @@ const getAll = async (req, res) => {
     }
 };
 
-const getById = async (req, res) => {
+const getContactById = async (req, res) => {
     try {
         const contact = await Contact.findById(req.params.id);
     
@@ -30,7 +30,7 @@ const getById = async (req, res) => {
     }
 };
 
-const createNew = async (req, res) => {
+const createNewContact = async (req, res) => {
     try {
         const contact = await Contact.create(req.body);
         res.status(201).json(contact);
@@ -42,7 +42,7 @@ const createNew = async (req, res) => {
     }
 };
 
-const updateExisting = async (req, res) => {
+const updateExistingContact = async (req, res) => {
     try {
         const contact = await Contact.findByIdAndUpdate(
             req.params.id,
@@ -68,7 +68,7 @@ const updateExisting = async (req, res) => {
     }
 };
 
-const deleteById = async (req, res) => {
+const deleteContactById = async (req, res) => {
     try {
         const contact = await Contact.findByIdAndDelete(req.params.id);
 
@@ -88,9 +88,9 @@ const deleteById = async (req, res) => {
 };
 
 module.exports = {
-    getAll,
-    getById,
-    createNew,
-    updateExisting,
-    deleteById,
+    getAllContacts,
+    getContactById,
+    createNewContact,
+    updateExistingContact,
+    deleteContactById,
 };

@@ -1,12 +1,12 @@
-const route = (req, res) => {
+const namePageCole = (req, res) => {
     res.send('Cole Beebe-Urbanaiwz');
 };
 
-const route2 = (req, res) => {
+const namePageChloe = (req, res) => {
     res.send('Chloe');
 }
 
 module.exports = {
-    route,
-    route2
+    namePageCole,
+    namePageChloe
 };
