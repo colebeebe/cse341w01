@@ -6,4 +6,6 @@ router.get('/chloe', namePageChloe);
 
 router.use('/contacts', require('./contacts'));
 
+router.use('/api-docs', require('./swagger'));
+
 module.exports = router;

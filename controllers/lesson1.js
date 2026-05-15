@@ -1,5 +1,5 @@
 const namePageCole = (req, res) => {
-    res.send('Cole Beebe-Urbanaiwz');
+    res.send('Cole Beebe-Urbanawiz');
 };
 
 const namePageChloe = (req, res) => {
